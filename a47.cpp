@@ -5,13 +5,17 @@ int main()
 char ch;
 while((ch=getchar())!='\n')
     {
-    if(isalpha(ch))
+    if(islower(ch))
         {
-        putchar(ch+1);
+        ch=toupper(ch);
         }
-    else{
-        putchar(ch);
+    else if(isupper(ch))
+        {
+        ch=tolower(ch);
         }
+    else
+        {}
+    putchar(ch);
     }
 putchar(ch);
 }
